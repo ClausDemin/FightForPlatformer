@@ -16,10 +16,5 @@ namespace Assets.Codebase.GameLogic.Common.MovementBehavior
         {
             actor.transform.position += _calculator.EvaluateMovement(direction, speed);
         }
-
-        public void Jump(Rigidbody2D actor, float jumpForce)
-        {
-            actor.velocity = Vector3.up * jumpForce;
-        }
     }
 }

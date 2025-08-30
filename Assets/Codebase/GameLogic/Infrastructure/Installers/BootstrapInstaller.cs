@@ -1,5 +1,5 @@
-﻿using Assets.Codebase.GameLogic.Services.InputService;
-using Assets.Codebase.GameLogic.Services.InputService.Core;
+﻿using Assets.Codebase.GameLogic.Infrastructure.Inputs;
+using Assets.Codebase.GameLogic.Infrastructure.Inputs.Interface;
 using Assets.Codebase.GameLogic.Services.ResourcesLoading;
 using Zenject;
 

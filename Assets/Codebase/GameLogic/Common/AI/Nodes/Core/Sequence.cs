@@ -13,16 +13,11 @@
         {
             foreach (Node node in _nodes) 
             {
-                switch (node.Evaluate())
+                Status status = node.Evaluate();
+
+                if (status != Status.Success)
                 {
-                    case Status.Failure:
-                        return Status.Failure;
-
-                    case Status.Running:
-                        return Status.Running;
-
-                    case Status.Success:
-                        continue;
+                    return status;
                 }
             }
 

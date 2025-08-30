@@ -1,6 +1,8 @@
 ﻿using Assets.Codebase.GameLogic.Common.Ground;
+using Assets.Codebase.GameLogic.Common.JumpBehavior.Interface;
+using Assets.Codebase.GameLogic.Common.MovementBehavior.Enum;
 using Assets.Codebase.GameLogic.Common.MovementBehavior.Interface;
-using Assets.Codebase.GameLogic.Services.InputService.Core;
+using Assets.Codebase.GameLogic.Infrastructure.Inputs.Interface;
 using Assets.Codebase.GameLogic.Services.ResourcesLoading;
 using System;
 using UnityEngine;
@@ -9,10 +11,12 @@ using Zenject;
 namespace Assets.Codebase.GameLogic.Common.MovementBehavior
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class PlayerMovement: MonoBehaviour
+    public class PlayerMovement : MonoBehaviour
     {
         private IInputService _inputService;
         private IMovementService _movementService;
+        private IJumpService _jumpService;
+
         private GroundChecker _groundChecker;
         private Rigidbody2D _rigidbody;
 
@@ -21,11 +25,13 @@ namespace Assets.Codebase.GameLogic.Common.MovementBehavior
         private bool _isGrounded;
 
         [Inject]
-        public void Construct(IInputService inputService, IMovementService movementService, GroundChecker groundChecker, StaticDataProvider playerStaticData)
+        public void Construct(IInputService inputService, IMovementService movementService, IJumpService jumpService,
+                              GroundChecker groundChecker, StaticDataProvider playerStaticData)
         {
             _inputService = inputService;
             _movementService = movementService;
             _groundChecker = groundChecker;
+            _jumpService = jumpService;
 
             _movementSpeed = playerStaticData.PlayerConfig.Speed;
             _jumpForce = playerStaticData.PlayerConfig.JumpForce;
@@ -63,9 +69,9 @@ namespace Assets.Codebase.GameLogic.Common.MovementBehavior
 
         private bool TryJump(Rigidbody2D actor, float jumpForce)
         {
-            if (_inputService.IsJumpButtonDown() && _isGrounded) 
-            { 
-                _movementService.Jump(actor, jumpForce);
+            if (_inputService.IsJumpButtonDown() && _isGrounded)
+            {
+                _jumpService.Jump(actor, jumpForce);
 
                 Jumped?.Invoke();
 
@@ -75,7 +81,7 @@ namespace Assets.Codebase.GameLogic.Common.MovementBehavior
             return false;
         }
 
-        private MovementDirection GetDirection(float input) 
+        private MovementDirection GetDirection(float input)
         {
 
             if (input > 0)
@@ -94,8 +100,8 @@ namespace Assets.Codebase.GameLogic.Common.MovementBehavior
         {
             bool isGrounded = _groundChecker.CheckGround(transform.position);
 
-            if (_isGrounded != isGrounded) 
-            { 
+            if (_isGrounded != isGrounded)
+            {
                 _isGrounded = isGrounded;
                 GroundStateChanged?.Invoke(_isGrounded);
             }

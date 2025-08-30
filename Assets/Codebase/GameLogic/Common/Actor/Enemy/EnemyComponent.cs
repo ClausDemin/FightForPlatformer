@@ -1,6 +1,8 @@
-﻿using Assets.Codebase.GameLogic.Common.Actor.Player;
+﻿using Assets.Codebase.GameLogic.Common.Actor.Enemy.Animation;
+using Assets.Codebase.GameLogic.Common.Actor.Player;
 using Assets.Codebase.GameLogic.Common.AI;
 using Assets.Codebase.GameLogic.Common.MovementBehavior;
+using Assets.Codebase.GameLogic.Common.MovementBehavior.Enum;
 using UnityEngine;
 
 namespace Assets.Codebase.GameLogic.Common.Actor.Enemy
@@ -8,15 +10,17 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Enemy
     [RequireComponent(typeof(EnemyAnimator), typeof(EnemyMovement))]
     public class EnemyComponent : MonoBehaviour
     {
+        private RotationService _rotationService;
         private EnemyMovement _movementComponent;
         private EnemyAnimator _enemyAnimator;
+        private CollisionChecker _collisionChecker;
         private BehaviorTree _aiActor;
 
-        private SpriteRenderer _spriteRenderer;
 
-        public void Init(BehaviorTree aiActor) 
+        public void Init(BehaviorTree aiActor, RotationService rotationService) 
         {
             _aiActor = aiActor;
+            _rotationService = rotationService;
         }
 
         public bool HasEnemy { get; private set; }
@@ -26,13 +30,13 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Enemy
         {
             _movementComponent = GetComponent<EnemyMovement>();
             _enemyAnimator = GetComponent<EnemyAnimator>();
-
-            _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            _collisionChecker = GetComponent<CollisionChecker>();
         }
 
         private void Start()
         {
             SubscribeMovementEvents();
+            _collisionChecker.TriggerEntered += SetEnemy;
         }
 
         private void OnDestroy()
@@ -45,7 +49,7 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Enemy
             _aiActor.Update();
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        private void SetEnemy(Collider2D collision)
         {
             if (collision.gameObject.TryGetComponent<PlayerComponent>(out var player))
             {
@@ -62,19 +66,7 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Enemy
 
         private void FlipView(MovementDirection direction)
         {
-            if (_spriteRenderer != null)
-            {
-                switch (direction)
-                {
-                    case MovementDirection.Left:
-                        _spriteRenderer.flipX = false;
-                        break;
-
-                    case MovementDirection.Right:
-                        _spriteRenderer.flipX = true;
-                        break;
-                }
-            }
+            _rotationService.RotateFaceToDirection(transform, direction);
         }
 
         private void SubscribeMovementEvents()

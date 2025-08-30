@@ -1,5 +1,5 @@
 ﻿using Assets.Codebase.GameLogic.Common.CameraControls;
-using Assets.Codebase.GameLogic.Services;
+using Assets.Codebase.GameLogic.Infrastructure.Factories;
 using UnityEngine;
 using Zenject;
 
@@ -7,19 +7,19 @@ namespace Assets.Codebase.GameLogic.Common.Spawners
 {
     public class PlayerSpawner: MonoBehaviour
     {
-        [SerializeField] private CameraFollow _camera;
+        [SerializeField] private PlayerFollower _camera;
 
-        private ActorsFactory _actorsFactory;
+        private PlayerFactory _playerFactory;
 
         [Inject]
-        public void Construct(ActorsFactory actorsFactory) 
+        public void Construct(PlayerFactory actorsFactory) 
         { 
-            _actorsFactory = actorsFactory;
+            _playerFactory = actorsFactory;
         }
 
         private void Awake()
         {
-           _camera.Init(_actorsFactory.CreatePlayer(transform.position));
+           _camera.Init(_playerFactory.CreatePlayer(transform.position));
         }
     }
 }

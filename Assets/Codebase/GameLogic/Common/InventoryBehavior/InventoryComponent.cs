@@ -18,4 +18,23 @@ public class InventoryComponent : MonoBehaviour
             _inventory.Add(typeof(TGood), 1);
         }
     }
+
+    public void HandleCollision(Collision2D collision) 
+    {
+        if (collision.gameObject.TryGetComponent(out IPickable pickable)) 
+        {
+            Type type = pickable.GetType();
+
+            if (_inventory.ContainsKey(type))
+            {
+                _inventory[type]++;
+            }
+            else 
+            { 
+                _inventory.Add (type, 1);
+            }
+
+            Destroy(collision.gameObject);
+        }
+    }
 }

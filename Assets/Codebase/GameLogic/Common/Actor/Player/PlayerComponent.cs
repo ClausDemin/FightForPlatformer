@@ -1,26 +1,41 @@
-﻿using Assets.Codebase.GameLogic.Common.MovementBehavior;
+﻿using Assets.Codebase.GameLogic.Common.Actor.Player.Animation;
+using Assets.Codebase.GameLogic.Common.MovementBehavior;
+using Assets.Codebase.GameLogic.Common.MovementBehavior.Enum;
 using UnityEngine;
+using Zenject;
 
 namespace Assets.Codebase.GameLogic.Common.Actor.Player
 {
     [RequireComponent(typeof(PlayerMovement), typeof(PlayerAnimator))]
-    public class PlayerComponent: MonoBehaviour
+    public class PlayerComponent : MonoBehaviour
     {
-        private SpriteRenderer _playerView;
-        private PlayerMovement _playerMovement;
+        private RotationService _rotationService;
         private PlayerAnimator _playerAnimator;
+        private PlayerMovement _playerMovement;
+        private InventoryComponent _inventoryComponent;
+        private CollisionChecker _collisionChecker;
+
+
+        [Inject]
+        public void Construct(RotationService rotationService)
+        {
+            _rotationService = rotationService;
+        }
 
         private void Awake()
         {
             _playerMovement = GetComponent<PlayerMovement>();
             _playerAnimator = GetComponent<PlayerAnimator>();
+
+            _inventoryComponent = GetComponent<InventoryComponent>();
+            _collisionChecker = GetComponent<CollisionChecker>();
         }
 
         private void Start()
         {
-            _playerView = GetComponentInChildren<SpriteRenderer>();
             SubscribeMovementEvents();
 
+            _collisionChecker.CollisionEntered += _inventoryComponent.HandleCollision;
         }
 
         private void OnDestroy()
@@ -28,24 +43,12 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Player
             UnsubscribeMovementEvents();
         }
 
-        private void FlipView(MovementDirection direction) 
+        private void FlipView(MovementDirection direction)
         {
-            if (_playerView != null) 
-            {
-                switch (direction)
-                {
-                    case MovementDirection.Left:
-                        _playerView.flipX = true;
-                        break;
-
-                    case MovementDirection.Right:
-                        _playerView.flipX = false;
-                        break;
-                }
-            }
+            _rotationService.RotateFaceToDirection(transform, direction);
         }
 
-        private void SubscribeMovementEvents() 
+        private void SubscribeMovementEvents()
         {
             _playerMovement.Moved += FlipView;
             _playerMovement.Moved += _playerAnimator.SwitchMovementAnimation;
@@ -53,7 +56,7 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Player
             _playerMovement.Jumped += _playerAnimator.PlayJumpAnimation;
         }
 
-        private void UnsubscribeMovementEvents() 
+        private void UnsubscribeMovementEvents()
         {
             _playerMovement.Moved -= FlipView;
             _playerMovement.Moved -= _playerAnimator.SwitchMovementAnimation;

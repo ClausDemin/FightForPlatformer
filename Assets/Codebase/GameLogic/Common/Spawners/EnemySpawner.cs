@@ -1,4 +1,4 @@
-﻿using Assets.Codebase.GameLogic.Services;
+﻿using Assets.Codebase.GameLogic.Infrastructure.Factories;
 using UnityEngine;
 using Zenject;
 
@@ -6,10 +6,10 @@ namespace Assets.Codebase.GameLogic.Common.Spawners
 {
     public class EnemySpawner: MonoBehaviour
     {
-        private ActorsFactory _actorsFactory;
+        private EnemyFactory _actorsFactory;
 
         [Inject]
-        public void Construct(ActorsFactory actorsFactory) 
+        public void Construct(EnemyFactory actorsFactory) 
         { 
             _actorsFactory = actorsFactory;
         }

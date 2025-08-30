@@ -1,4 +1,5 @@
 ﻿using Assets.Codebase.GameLogic.Common.Ground;
+using Assets.Codebase.GameLogic.Common.MovementBehavior.Enum;
 using Assets.Codebase.GameLogic.Common.MovementBehavior.Interface;
 using Assets.Codebase.GameLogic.Services.ResourcesLoading;
 using System;
@@ -14,8 +15,6 @@ namespace Assets.Codebase.GameLogic.Common.MovementBehavior
         private GroundChecker _groundChecker;
         private Rigidbody2D _rigidbody;
 
-        private float _jumpHeight;
-        private float _jumpDistance;
         private bool _isGrounded;
 
         [Inject]
@@ -25,8 +24,6 @@ namespace Assets.Codebase.GameLogic.Common.MovementBehavior
             _groundChecker = groundChecker;
 
             MovementSpeed = staticDataProvider.EnemyConfig.MovementSpeed;
-            _jumpHeight = staticDataProvider.EnemyConfig.JumpHeight;
-            _jumpDistance = staticDataProvider.EnemyConfig.JumpDistance;
         }
 
         public event Action<MovementDirection> Moved;
