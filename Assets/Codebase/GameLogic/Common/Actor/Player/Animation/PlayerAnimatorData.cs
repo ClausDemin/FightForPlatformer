@@ -9,6 +9,6 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Player.Animation
         public static readonly int Jump = Animator.StringToHash(nameof(Jump));
         public static readonly int Attack = Animator.StringToHash(nameof(Attack));
         public static readonly int Damaged = Animator.StringToHash(nameof(Damaged));
-        public static readonly int Die = Animator.StringToHash(nameof(Die));
+        public static readonly int IsAlive = Animator.StringToHash(nameof(IsAlive));
     }
 }

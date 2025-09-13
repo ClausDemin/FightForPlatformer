@@ -1,4 +1,6 @@
-﻿using Assets.Codebase.GameLogic.Common.Ground;
+﻿using Assets.Codebase.GameLogic.Common.AttackBehavior;
+using Assets.Codebase.GameLogic.Common.AttackBehavior.Interface;
+using Assets.Codebase.GameLogic.Common.Ground;
 using Assets.Codebase.GameLogic.Common.JumpBehavior;
 using Assets.Codebase.GameLogic.Common.JumpBehavior.Interface;
 using Assets.Codebase.GameLogic.Common.MovementBehavior;
@@ -17,7 +19,13 @@ namespace Assets.Codebase.GameLogic.Infrastructure.Installers
             BindMovementService();
             BindJumpService();
             BindGroundChecker();
+            BindDamageService();
             BindFactories();
+        }
+
+        private void BindDamageService()
+        {
+            Container.Bind<IDamageService>().To<DamageService>().AsSingle();
         }
 
         private void BindMovementCalculator() 

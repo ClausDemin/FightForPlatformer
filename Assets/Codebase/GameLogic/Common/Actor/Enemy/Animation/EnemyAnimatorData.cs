@@ -9,6 +9,6 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Enemy.Animation
         public static readonly int HasEnemy = Animator.StringToHash(nameof(HasEnemy));
         public static readonly int Attack = Animator.StringToHash(nameof(Attack));
         public static readonly int Damaged = Animator.StringToHash(nameof(Damaged));
-        public static readonly int Die = Animator.StringToHash(nameof(Die));
+        public static readonly int IsAlive = Animator.StringToHash(nameof(IsAlive));
     }
 }

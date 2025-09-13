@@ -1,25 +1,36 @@
 ﻿using Assets.Codebase.GameLogic.Common.Actor.Player;
+using Assets.Codebase.GameLogic.Common.AttackBehavior;
+using Assets.Codebase.GameLogic.Common.AttackBehavior.Interface;
+using Assets.Codebase.GameLogic.Common.HealthBehavior;
 using Assets.Codebase.GameLogic.Infrastructure.Configs;
 using Assets.Codebase.GameLogic.Services.ResourcesLoading;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using Zenject;
 
 namespace Assets.Codebase.GameLogic.Infrastructure.Factories
 {
     public class PlayerFactory
     {
-        private readonly PlayerConfig _playerConfig;
         private readonly IInstantiator _instantiator;
+        private readonly IDamageService _damageService;
+        private readonly PlayerConfig _playerConfig;
 
-        public PlayerFactory(StaticDataProvider staticDataProvider, IInstantiator instantiator)
+        public PlayerFactory(IInstantiator instantiator, IDamageService damageService, StaticDataProvider staticDataProvider)
         {
-            _playerConfig = staticDataProvider.PlayerConfig;
             _instantiator = instantiator;
+            _damageService = damageService;
+            _playerConfig = staticDataProvider.PlayerConfig;
         }
 
         public PlayerComponent CreatePlayer(Vector3 position)
         {
-            return _instantiator.InstantiatePrefabForComponent<PlayerComponent>(_playerConfig.PlayerPrefab, position, Quaternion.identity, null);
+            PlayerComponent player = _instantiator.InstantiatePrefabForComponent<PlayerComponent>(_playerConfig.PlayerPrefab, position, Quaternion.identity, null);
+
+            player.GetComponent<HealthComponent>().Init(new HealthData(_playerConfig.MaxHealth));
+            player.GetComponent<AttackComponent>().Init(_damageService, new AttackData(_playerConfig.Damage, _playerConfig.AttackRadius, _playerConfig.Cooldown));
+
+            return player;
         }
     }
 }

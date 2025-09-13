@@ -126,8 +126,8 @@ TextureImporter:
       name: FightForPlatformerTileset_0
       rect:
         serializedVersion: 2
-        x: 64
-        y: 416
+        x: 0
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -147,8 +147,8 @@ TextureImporter:
       name: FightForPlatformerTileset_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 416
+        x: 32
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -168,8 +168,8 @@ TextureImporter:
       name: FightForPlatformerTileset_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 416
+        x: 64
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -189,8 +189,8 @@ TextureImporter:
       name: FightForPlatformerTileset_3
       rect:
         serializedVersion: 2
-        x: 160
-        y: 416
+        x: 96
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -210,8 +210,8 @@ TextureImporter:
       name: FightForPlatformerTileset_4
       rect:
         serializedVersion: 2
-        x: 192
-        y: 416
+        x: 128
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -231,8 +231,8 @@ TextureImporter:
       name: FightForPlatformerTileset_5
       rect:
         serializedVersion: 2
-        x: 224
-        y: 416
+        x: 160
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -252,8 +252,8 @@ TextureImporter:
       name: FightForPlatformerTileset_6
       rect:
         serializedVersion: 2
-        x: 256
-        y: 416
+        x: 192
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -273,8 +273,8 @@ TextureImporter:
       name: FightForPlatformerTileset_7
       rect:
         serializedVersion: 2
-        x: 320
-        y: 416
+        x: 224
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -294,8 +294,8 @@ TextureImporter:
       name: FightForPlatformerTileset_8
       rect:
         serializedVersion: 2
-        x: 352
-        y: 416
+        x: 256
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -315,8 +315,8 @@ TextureImporter:
       name: FightForPlatformerTileset_9
       rect:
         serializedVersion: 2
-        x: 384
-        y: 416
+        x: 320
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -336,8 +336,8 @@ TextureImporter:
       name: FightForPlatformerTileset_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 384
+        x: 384
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -357,8 +357,8 @@ TextureImporter:
       name: FightForPlatformerTileset_11
       rect:
         serializedVersion: 2
-        x: 64
-        y: 384
+        x: 416
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -378,8 +378,8 @@ TextureImporter:
       name: FightForPlatformerTileset_12
       rect:
         serializedVersion: 2
-        x: 96
-        y: 384
+        x: 448
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -399,8 +399,8 @@ TextureImporter:
       name: FightForPlatformerTileset_13
       rect:
         serializedVersion: 2
-        x: 128
-        y: 384
+        x: 64
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -420,8 +420,8 @@ TextureImporter:
       name: FightForPlatformerTileset_14
       rect:
         serializedVersion: 2
-        x: 160
-        y: 384
+        x: 96
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -441,8 +441,8 @@ TextureImporter:
       name: FightForPlatformerTileset_15
       rect:
         serializedVersion: 2
-        x: 192
-        y: 384
+        x: 128
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -462,8 +462,8 @@ TextureImporter:
       name: FightForPlatformerTileset_16
       rect:
         serializedVersion: 2
-        x: 224
-        y: 384
+        x: 160
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -483,8 +483,8 @@ TextureImporter:
       name: FightForPlatformerTileset_17
       rect:
         serializedVersion: 2
-        x: 256
-        y: 384
+        x: 192
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -504,8 +504,8 @@ TextureImporter:
       name: FightForPlatformerTileset_18
       rect:
         serializedVersion: 2
-        x: 320
-        y: 384
+        x: 224
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -525,8 +525,8 @@ TextureImporter:
       name: FightForPlatformerTileset_19
       rect:
         serializedVersion: 2
-        x: 352
-        y: 384
+        x: 256
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -546,8 +546,8 @@ TextureImporter:
       name: FightForPlatformerTileset_20
       rect:
         serializedVersion: 2
-        x: 384
-        y: 384
+        x: 320
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -567,8 +567,8 @@ TextureImporter:
       name: FightForPlatformerTileset_21
       rect:
         serializedVersion: 2
-        x: 0
-        y: 352
+        x: 384
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -588,8 +588,8 @@ TextureImporter:
       name: FightForPlatformerTileset_22
       rect:
         serializedVersion: 2
-        x: 64
-        y: 352
+        x: 416
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -609,8 +609,8 @@ TextureImporter:
       name: FightForPlatformerTileset_23
       rect:
         serializedVersion: 2
-        x: 96
-        y: 352
+        x: 64
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -630,8 +630,8 @@ TextureImporter:
       name: FightForPlatformerTileset_24
       rect:
         serializedVersion: 2
-        x: 128
-        y: 352
+        x: 96
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -651,8 +651,8 @@ TextureImporter:
       name: FightForPlatformerTileset_25
       rect:
         serializedVersion: 2
-        x: 160
-        y: 352
+        x: 128
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -672,8 +672,8 @@ TextureImporter:
       name: FightForPlatformerTileset_26
       rect:
         serializedVersion: 2
-        x: 192
-        y: 352
+        x: 160
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -693,8 +693,8 @@ TextureImporter:
       name: FightForPlatformerTileset_27
       rect:
         serializedVersion: 2
-        x: 256
-        y: 352
+        x: 192
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -714,8 +714,8 @@ TextureImporter:
       name: FightForPlatformerTileset_28
       rect:
         serializedVersion: 2
-        x: 320
-        y: 352
+        x: 224
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -735,8 +735,8 @@ TextureImporter:
       name: FightForPlatformerTileset_29
       rect:
         serializedVersion: 2
-        x: 352
-        y: 352
+        x: 256
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -756,8 +756,8 @@ TextureImporter:
       name: FightForPlatformerTileset_30
       rect:
         serializedVersion: 2
-        x: 384
-        y: 352
+        x: 320
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -777,8 +777,8 @@ TextureImporter:
       name: FightForPlatformerTileset_31
       rect:
         serializedVersion: 2
-        x: 0
-        y: 320
+        x: 384
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -798,8 +798,8 @@ TextureImporter:
       name: FightForPlatformerTileset_32
       rect:
         serializedVersion: 2
-        x: 64
-        y: 320
+        x: 416
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -819,8 +819,8 @@ TextureImporter:
       name: FightForPlatformerTileset_33
       rect:
         serializedVersion: 2
-        x: 96
-        y: 320
+        x: 448
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -840,8 +840,8 @@ TextureImporter:
       name: FightForPlatformerTileset_34
       rect:
         serializedVersion: 2
-        x: 128
-        y: 320
+        x: 64
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -861,8 +861,8 @@ TextureImporter:
       name: FightForPlatformerTileset_35
       rect:
         serializedVersion: 2
-        x: 160
-        y: 320
+        x: 96
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -882,8 +882,8 @@ TextureImporter:
       name: FightForPlatformerTileset_36
       rect:
         serializedVersion: 2
-        x: 192
-        y: 320
+        x: 128
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -903,8 +903,8 @@ TextureImporter:
       name: FightForPlatformerTileset_37
       rect:
         serializedVersion: 2
-        x: 256
-        y: 320
+        x: 160
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -924,8 +924,8 @@ TextureImporter:
       name: FightForPlatformerTileset_38
       rect:
         serializedVersion: 2
-        x: 320
-        y: 320
+        x: 192
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -945,8 +945,8 @@ TextureImporter:
       name: FightForPlatformerTileset_39
       rect:
         serializedVersion: 2
-        x: 352
-        y: 320
+        x: 256
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -967,7 +967,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 320
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -987,8 +987,8 @@ TextureImporter:
       name: FightForPlatformerTileset_41
       rect:
         serializedVersion: 2
-        x: 96
-        y: 288
+        x: 416
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -1008,8 +1008,8 @@ TextureImporter:
       name: FightForPlatformerTileset_42
       rect:
         serializedVersion: 2
-        x: 128
-        y: 288
+        x: 448
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -1029,8 +1029,8 @@ TextureImporter:
       name: FightForPlatformerTileset_43
       rect:
         serializedVersion: 2
-        x: 160
-        y: 288
+        x: 480
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -1050,8 +1050,8 @@ TextureImporter:
       name: FightForPlatformerTileset_44
       rect:
         serializedVersion: 2
-        x: 192
-        y: 288
+        x: 96
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -1071,8 +1071,8 @@ TextureImporter:
       name: FightForPlatformerTileset_45
       rect:
         serializedVersion: 2
-        x: 224
-        y: 288
+        x: 128
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -1092,8 +1092,8 @@ TextureImporter:
       name: FightForPlatformerTileset_46
       rect:
         serializedVersion: 2
-        x: 288
-        y: 288
+        x: 160
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -1113,8 +1113,8 @@ TextureImporter:
       name: FightForPlatformerTileset_47
       rect:
         serializedVersion: 2
-        x: 320
-        y: 288
+        x: 192
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -1134,8 +1134,8 @@ TextureImporter:
       name: FightForPlatformerTileset_48
       rect:
         serializedVersion: 2
-        x: 352
-        y: 288
+        x: 224
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -1156,7 +1156,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 288
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -1176,8 +1176,8 @@ TextureImporter:
       name: FightForPlatformerTileset_50
       rect:
         serializedVersion: 2
-        x: 288
-        y: 256
+        x: 480
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -1197,8 +1197,8 @@ TextureImporter:
       name: FightForPlatformerTileset_51
       rect:
         serializedVersion: 2
-        x: 384
-        y: 256
+        x: 320
+        y: 320
         width: 32
         height: 32
       alignment: 0
@@ -1218,8 +1218,8 @@ TextureImporter:
       name: FightForPlatformerTileset_52
       rect:
         serializedVersion: 2
-        x: 32
-        y: 224
+        x: 352
+        y: 320
         width: 32
         height: 32
       alignment: 0
@@ -1239,8 +1239,8 @@ TextureImporter:
       name: FightForPlatformerTileset_53
       rect:
         serializedVersion: 2
-        x: 64
-        y: 224
+        x: 384
+        y: 320
         width: 32
         height: 32
       alignment: 0
@@ -1260,8 +1260,8 @@ TextureImporter:
       name: FightForPlatformerTileset_54
       rect:
         serializedVersion: 2
-        x: 96
-        y: 224
+        x: 416
+        y: 320
         width: 32
         height: 32
       alignment: 0
@@ -1281,8 +1281,8 @@ TextureImporter:
       name: FightForPlatformerTileset_55
       rect:
         serializedVersion: 2
-        x: 128
-        y: 224
+        x: 448
+        y: 320
         width: 32
         height: 32
       alignment: 0
@@ -1302,8 +1302,8 @@ TextureImporter:
       name: FightForPlatformerTileset_56
       rect:
         serializedVersion: 2
-        x: 224
-        y: 224
+        x: 480
+        y: 320
         width: 32
         height: 32
       alignment: 0
@@ -1323,8 +1323,8 @@ TextureImporter:
       name: FightForPlatformerTileset_57
       rect:
         serializedVersion: 2
-        x: 256
-        y: 224
+        x: 0
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -1344,8 +1344,8 @@ TextureImporter:
       name: FightForPlatformerTileset_58
       rect:
         serializedVersion: 2
-        x: 288
-        y: 224
+        x: 32
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -1365,8 +1365,8 @@ TextureImporter:
       name: FightForPlatformerTileset_59
       rect:
         serializedVersion: 2
-        x: 320
-        y: 224
+        x: 64
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -1386,8 +1386,8 @@ TextureImporter:
       name: FightForPlatformerTileset_60
       rect:
         serializedVersion: 2
-        x: 352
-        y: 224
+        x: 96
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -1407,8 +1407,8 @@ TextureImporter:
       name: FightForPlatformerTileset_61
       rect:
         serializedVersion: 2
-        x: 384
-        y: 224
+        x: 128
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -1428,8 +1428,8 @@ TextureImporter:
       name: FightForPlatformerTileset_62
       rect:
         serializedVersion: 2
-        x: 32
-        y: 192
+        x: 160
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -1449,8 +1449,8 @@ TextureImporter:
       name: FightForPlatformerTileset_63
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
+        x: 320
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -1470,8 +1470,8 @@ TextureImporter:
       name: FightForPlatformerTileset_64
       rect:
         serializedVersion: 2
-        x: 96
-        y: 192
+        x: 352
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -1491,8 +1491,8 @@ TextureImporter:
       name: FightForPlatformerTileset_65
       rect:
         serializedVersion: 2
-        x: 128
-        y: 192
+        x: 384
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -1512,8 +1512,8 @@ TextureImporter:
       name: FightForPlatformerTileset_66
       rect:
         serializedVersion: 2
-        x: 224
-        y: 192
+        x: 416
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -1533,8 +1533,8 @@ TextureImporter:
       name: FightForPlatformerTileset_67
       rect:
         serializedVersion: 2
-        x: 256
-        y: 192
+        x: 448
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -1554,8 +1554,8 @@ TextureImporter:
       name: FightForPlatformerTileset_68
       rect:
         serializedVersion: 2
-        x: 288
-        y: 192
+        x: 480
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -1575,8 +1575,8 @@ TextureImporter:
       name: FightForPlatformerTileset_69
       rect:
         serializedVersion: 2
-        x: 320
-        y: 192
+        x: 64
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -1596,8 +1596,8 @@ TextureImporter:
       name: FightForPlatformerTileset_70
       rect:
         serializedVersion: 2
-        x: 352
-        y: 192
+        x: 96
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -1617,8 +1617,8 @@ TextureImporter:
       name: FightForPlatformerTileset_71
       rect:
         serializedVersion: 2
-        x: 384
-        y: 192
+        x: 320
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -1638,8 +1638,8 @@ TextureImporter:
       name: FightForPlatformerTileset_72
       rect:
         serializedVersion: 2
-        x: 32
-        y: 160
+        x: 352
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -1659,8 +1659,8 @@ TextureImporter:
       name: FightForPlatformerTileset_73
       rect:
         serializedVersion: 2
-        x: 64
-        y: 160
+        x: 384
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -1680,8 +1680,8 @@ TextureImporter:
       name: FightForPlatformerTileset_74
       rect:
         serializedVersion: 2
-        x: 96
-        y: 160
+        x: 416
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -1701,8 +1701,8 @@ TextureImporter:
       name: FightForPlatformerTileset_75
       rect:
         serializedVersion: 2
-        x: 128
-        y: 160
+        x: 448
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -1722,8 +1722,8 @@ TextureImporter:
       name: FightForPlatformerTileset_76
       rect:
         serializedVersion: 2
-        x: 224
-        y: 160
+        x: 480
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -1743,8 +1743,8 @@ TextureImporter:
       name: FightForPlatformerTileset_77
       rect:
         serializedVersion: 2
-        x: 256
-        y: 160
+        x: 32
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -1764,8 +1764,8 @@ TextureImporter:
       name: FightForPlatformerTileset_78
       rect:
         serializedVersion: 2
-        x: 288
-        y: 160
+        x: 64
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -1785,8 +1785,8 @@ TextureImporter:
       name: FightForPlatformerTileset_79
       rect:
         serializedVersion: 2
-        x: 320
-        y: 160
+        x: 96
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -1806,8 +1806,8 @@ TextureImporter:
       name: FightForPlatformerTileset_80
       rect:
         serializedVersion: 2
-        x: 352
-        y: 160
+        x: 128
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -1827,8 +1827,8 @@ TextureImporter:
       name: FightForPlatformerTileset_81
       rect:
         serializedVersion: 2
-        x: 384
-        y: 160
+        x: 32
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1848,8 +1848,8 @@ TextureImporter:
       name: FightForPlatformerTileset_82
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 64
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1869,8 +1869,8 @@ TextureImporter:
       name: FightForPlatformerTileset_83
       rect:
         serializedVersion: 2
-        x: 32
-        y: 128
+        x: 96
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1890,8 +1890,8 @@ TextureImporter:
       name: FightForPlatformerTileset_84
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
+        x: 128
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1911,8 +1911,8 @@ TextureImporter:
       name: FightForPlatformerTileset_85
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
+        x: 288
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1932,8 +1932,8 @@ TextureImporter:
       name: FightForPlatformerTileset_86
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
+        x: 320
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1953,8 +1953,8 @@ TextureImporter:
       name: FightForPlatformerTileset_87
       rect:
         serializedVersion: 2
-        x: 160
-        y: 128
+        x: 352
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1974,8 +1974,8 @@ TextureImporter:
       name: FightForPlatformerTileset_88
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
+        x: 384
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1996,7 +1996,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 96
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -2017,7 +2017,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 96
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -2038,7 +2038,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 96
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -2059,7 +2059,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 96
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -2079,8 +2079,8 @@ TextureImporter:
       name: FightForPlatformerTileset_93
       rect:
         serializedVersion: 2
-        x: 160
-        y: 96
+        x: 288
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -2100,8 +2100,8 @@ TextureImporter:
       name: FightForPlatformerTileset_94
       rect:
         serializedVersion: 2
-        x: 192
-        y: 96
+        x: 320
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -2121,8 +2121,8 @@ TextureImporter:
       name: FightForPlatformerTileset_95
       rect:
         serializedVersion: 2
-        x: 224
-        y: 96
+        x: 352
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -2142,8 +2142,8 @@ TextureImporter:
       name: FightForPlatformerTileset_96
       rect:
         serializedVersion: 2
-        x: 288
-        y: 96
+        x: 384
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -2163,8 +2163,8 @@ TextureImporter:
       name: FightForPlatformerTileset_97
       rect:
         serializedVersion: 2
-        x: 320
-        y: 96
+        x: 0
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -2184,8 +2184,8 @@ TextureImporter:
       name: FightForPlatformerTileset_98
       rect:
         serializedVersion: 2
-        x: 352
-        y: 96
+        x: 32
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -2205,8 +2205,8 @@ TextureImporter:
       name: FightForPlatformerTileset_99
       rect:
         serializedVersion: 2
-        x: 384
-        y: 96
+        x: 64
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -2226,8 +2226,8 @@ TextureImporter:
       name: FightForPlatformerTileset_100
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 96
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -2247,8 +2247,8 @@ TextureImporter:
       name: FightForPlatformerTileset_101
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
+        x: 128
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -2269,7 +2269,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 64
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -2290,7 +2290,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 64
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -2311,7 +2311,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
-        y: 64
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -2332,7 +2332,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 352
-        y: 64
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -2353,7 +2353,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 64
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -2374,7 +2374,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -2395,7 +2395,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -2416,7 +2416,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 32
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -2437,7 +2437,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 32
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -2458,7 +2458,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 32
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -2479,7 +2479,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 32
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -2499,8 +2499,8 @@ TextureImporter:
       name: FightForPlatformerTileset_113
       rect:
         serializedVersion: 2
-        x: 288
-        y: 32
+        x: 192
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -2520,8 +2520,8 @@ TextureImporter:
       name: FightForPlatformerTileset_114
       rect:
         serializedVersion: 2
-        x: 320
-        y: 32
+        x: 224
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -2541,8 +2541,8 @@ TextureImporter:
       name: FightForPlatformerTileset_115
       rect:
         serializedVersion: 2
-        x: 352
-        y: 32
+        x: 288
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -2562,8 +2562,8 @@ TextureImporter:
       name: FightForPlatformerTileset_116
       rect:
         serializedVersion: 2
-        x: 384
-        y: 32
+        x: 320
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -2583,8 +2583,8 @@ TextureImporter:
       name: FightForPlatformerTileset_117
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 352
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -2604,8 +2604,8 @@ TextureImporter:
       name: FightForPlatformerTileset_118
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
+        x: 384
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -2625,8 +2625,8 @@ TextureImporter:
       name: FightForPlatformerTileset_119
       rect:
         serializedVersion: 2
-        x: 288
-        y: 0
+        x: 64
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -2646,8 +2646,8 @@ TextureImporter:
       name: FightForPlatformerTileset_120
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
+        x: 96
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -2667,8 +2667,8 @@ TextureImporter:
       name: FightForPlatformerTileset_121
       rect:
         serializedVersion: 2
-        x: 352
-        y: 0
+        x: 160
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -2688,8 +2688,8 @@ TextureImporter:
       name: FightForPlatformerTileset_122
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
+        x: 288
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -2701,6 +2701,69 @@ TextureImporter:
       bones: []
       spriteID: eacf32ac5ecfb5a4a88de0c4dba81b03
       internalID: 1151840708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FightForPlatformerTileset_123
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a4de1e37814184fa4402264c843722
+      internalID: 857495963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FightForPlatformerTileset_124
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 364793cc0c0c38f42b920d281338a7ec
+      internalID: 1257463588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FightForPlatformerTileset_125
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4353732a5ac1674c93e81bccd424722
+      internalID: -2052620932
       vertices: []
       indices: 
       edges: []
@@ -2744,6 +2807,9 @@ TextureImporter:
       FightForPlatformerTileset_120: -1376356966
       FightForPlatformerTileset_121: 1962017843
       FightForPlatformerTileset_122: 1151840708
+      FightForPlatformerTileset_123: 857495963
+      FightForPlatformerTileset_124: 1257463588
+      FightForPlatformerTileset_125: -2052620932
       FightForPlatformerTileset_13: 938123048
       FightForPlatformerTileset_14: 1076356372
       FightForPlatformerTileset_15: -1436808110

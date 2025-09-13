@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5523020185574165371}
   - component: {fileID: 5390588330697305493}
   - component: {fileID: 6087819730318815277}
+  - component: {fileID: 6137680086973329619}
   m_Layer: 0
   m_Name: BanditView
   m_TagString: Untagged
@@ -106,6 +107,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6137680086973329619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156821584976240637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e76772453a55d45b82214abb1fbf0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9165147260320673283
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,6 +135,8 @@ GameObject:
   - component: {fileID: 1188916093768391473}
   - component: {fileID: 2054512887457718676}
   - component: {fileID: -1993519744917213790}
+  - component: {fileID: -9188535816642344532}
+  - component: {fileID: -1179070998943720443}
   m_Layer: 0
   m_Name: Bandit
   m_TagString: Untagged
@@ -266,6 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e286aea84c966f14892ac4dcfefe94d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animationEvents: {fileID: 6137680086973329619}
 --- !u!114 &2054512887457718676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,5 +305,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b2c3e34a3563c647bc3f89672f2f440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-9188535816642344532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9165147260320673283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67965eabc46e22a48a8bef14827c80d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-1179070998943720443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9165147260320673283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68d66f80e1ff42b4a926279ef1a197f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -27,22 +27,32 @@ namespace Assets.Codebase.GameLogic.Common.AI.Nodes.Implementation
 
         public override Status Evaluate()
         {
-            if ((_destinationPoint - _character.position).magnitude > DestinationTolerance)
-            {
-                if (_movementBehavior.Evaluate(_currentDirection) == Status.Success) 
-                {
-                    return Status.Running;
-                }
-
-                return Status.Failure;
-            }
-            else 
+            if (DestinationPointIsReached())
             {
                 SwitchDirection();
                 _destinationPoint = GetDestinationPoint(_spawnPoint, _currentDirection);
 
                 return Status.Success;
             }
+            else
+            {
+                if (CanMove())
+                {
+                    return Status.Running;
+                }
+
+                return Status.Failure;
+            }
+        }
+
+        private bool CanMove()
+        {
+            return _movementBehavior.Evaluate(_currentDirection) == Status.Success;
+        }
+
+        private bool DestinationPointIsReached()
+        {
+            return (_destinationPoint - _character.position).magnitude < DestinationTolerance;
         }
 
         private Vector3 GetDestinationPoint(Vector3 spawnPoint, Vector3 direction) 

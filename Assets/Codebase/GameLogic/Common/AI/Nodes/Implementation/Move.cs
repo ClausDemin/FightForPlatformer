@@ -40,11 +40,16 @@ namespace Assets.Codebase.GameLogic.Common.AI.Nodes.Implementation
 
         private bool IsMovementAvailable(Vector3 position, Vector3 direction, float speed)
         {
-            Vector3 predictedPosition = position + _movementCalculator.EvaluateMovement(direction, speed);
+            if (_characterMovement.enabled) 
+            {
+                Vector3 predictedPosition = position + _movementCalculator.EvaluateMovement(direction, speed);
 
-            predictedPosition = AvoidPlatformEdges(direction, predictedPosition);
+                predictedPosition = AvoidPlatformEdges(direction, predictedPosition);
 
-            return _groundChecker.CheckGround(predictedPosition);
+                return _groundChecker.CheckGround(predictedPosition);
+            }
+
+            return false;
         }
 
         private static Vector3 AvoidPlatformEdges(Vector3 direction, Vector3 predictedPosition)

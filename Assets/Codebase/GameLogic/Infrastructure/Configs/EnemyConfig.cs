@@ -7,8 +7,15 @@ namespace Assets.Codebase.GameLogic.Infrastructure.Configs
     public class EnemyConfig: ScriptableObject
     {
         [field: SerializeField] public EnemyComponent Prefab { get; private set; }
+
         [field: SerializeField] public float MovementSpeed { get; private set; }
         [field: SerializeField] public float JumpHeight { get; private set; }
         [field: SerializeField] public float JumpDistance { get; private set; }
+
+        [field: SerializeField] public int MaxHealth { get; private set; }
+
+        [field: SerializeField] public int Damage { get; private set; }
+        [field: SerializeField] public float AttackRadius { get; private set; }
+        [field: SerializeField] public float Cooldown { get; private set; }
     }
 }

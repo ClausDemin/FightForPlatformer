@@ -13,7 +13,6 @@ namespace Assets.Codebase.GameLogic.Common.MovementBehavior
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerMovement : MonoBehaviour
     {
-        private IInputService _inputService;
         private IMovementService _movementService;
         private IJumpService _jumpService;
 
@@ -25,10 +24,8 @@ namespace Assets.Codebase.GameLogic.Common.MovementBehavior
         private bool _isGrounded;
 
         [Inject]
-        public void Construct(IInputService inputService, IMovementService movementService, IJumpService jumpService,
-                              GroundChecker groundChecker, StaticDataProvider playerStaticData)
+        public void Construct(IMovementService movementService, IJumpService jumpService, GroundChecker groundChecker, StaticDataProvider playerStaticData)
         {
-            _inputService = inputService;
             _movementService = movementService;
             _groundChecker = groundChecker;
             _jumpService = jumpService;
@@ -49,29 +46,20 @@ namespace Assets.Codebase.GameLogic.Common.MovementBehavior
         private void FixedUpdate()
         {
             CheckGround();
-            Move(_rigidbody, _movementSpeed);
-            TryJump(_rigidbody, _jumpForce);
         }
 
-        private void Move(Rigidbody2D actor, float speed)
+        public void Move(Vector3 direction)
         {
-            float input = _inputService.Horizontal;
+            _movementService.Move(_rigidbody, direction, _movementSpeed);
 
-            Vector3 direction = (Vector3.right * input).normalized;
-
-            if (input != 0)
-            {
-                _movementService.Move(actor, direction, speed);
-            }
-
-            Moved?.Invoke(GetDirection(input));
+            Moved?.Invoke(GetDirection(direction));
         }
 
-        private bool TryJump(Rigidbody2D actor, float jumpForce)
+        public bool TryJump()
         {
-            if (_inputService.IsJumpButtonDown() && _isGrounded)
+            if (_isGrounded)
             {
-                _jumpService.Jump(actor, jumpForce);
+                _jumpService.Jump(_rigidbody, _jumpForce);
 
                 Jumped?.Invoke();
 
@@ -81,14 +69,14 @@ namespace Assets.Codebase.GameLogic.Common.MovementBehavior
             return false;
         }
 
-        private MovementDirection GetDirection(float input)
+        private MovementDirection GetDirection(Vector3 direction)
         {
 
-            if (input > 0)
+            if (direction == Vector3.right)
             {
                 return MovementDirection.Right;
             }
-            else if (input < 0)
+            else if (direction == Vector3.left)
             {
                 return MovementDirection.Left;
             }

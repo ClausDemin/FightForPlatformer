@@ -16,3 +16,7 @@ MonoBehaviour:
   <MovementSpeed>k__BackingField: 2.5
   <JumpHeight>k__BackingField: 3
   <JumpDistance>k__BackingField: 2
+  <MaxHealth>k__BackingField: 20
+  <Damage>k__BackingField: 5
+  <AttackRadius>k__BackingField: 1
+  <Cooldown>k__BackingField: 2.5

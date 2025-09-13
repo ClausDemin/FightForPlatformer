@@ -10,7 +10,7 @@ namespace Assets.Codebase.GameLogic.Common.CameraControls
         [SerializeField] private PlayerComponent _player;
         [SerializeField] private Vector3 _offset;
 
-        private void Update()
+        private void LateUpdate()
         {
             if (_player != null) 
             {
