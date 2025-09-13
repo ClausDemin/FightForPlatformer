@@ -2,10 +2,10 @@
 {
     public class AttackData
     {
-        public AttackData(int damage, float attackRadius, float cooldown)
+        public AttackData(int damage, float radius, float cooldown)
         {
             Damage = damage;
-            Radius = attackRadius;
+            Radius = radius;
             Cooldown = cooldown;
         }
 

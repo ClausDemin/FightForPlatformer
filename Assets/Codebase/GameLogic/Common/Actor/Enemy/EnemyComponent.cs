@@ -118,14 +118,14 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Enemy
 
         private void SubscribeAttackEvents()
         {
-            _attack.Attack += _enemyAnimator.PlayAttackAnimation;
+            _attack.Happened += _enemyAnimator.PlayAttackAnimation;
             _animationEvents.Attack += _attack.ApplyDamage;
             _animationEvents.AttackEnded += _attack.RaiseCooldown;
         }
 
         private void UnsubscribeAttackEvents()
         {
-            _attack.Attack -= _enemyAnimator.PlayAttackAnimation;
+            _attack.Happened -= _enemyAnimator.PlayAttackAnimation;
             _animationEvents.Attack -= _attack.ApplyDamage;
             _animationEvents.AttackEnded -= _attack.RaiseCooldown;
         }

@@ -102,7 +102,7 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Player
         {
             if (_inputService.IsAttackButtonDown())
             {
-                _attack.TryStartAttack();
+                _attack.TryStart();
             }
         }
 
@@ -143,14 +143,14 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Player
 
         private void SubscribeAttackEvents()
         {
-            _attack.Attack += _playerAnimator.PlayAttackAnimation;
+            _attack.Happened += _playerAnimator.PlayAttackAnimation;
             _animationEvents.Attack += _attack.ApplyDamage;
             _animationEvents.AttackEnded += _attack.RaiseCooldown;
         }
 
         private void UnsubscribeAttackEvents()
         {
-            _attack.Attack -= _playerAnimator.PlayAttackAnimation;
+            _attack.Happened -= _playerAnimator.PlayAttackAnimation;
             _animationEvents.Attack -= _attack.ApplyDamage;
             _animationEvents.AttackEnded -= _attack.RaiseCooldown;
         }

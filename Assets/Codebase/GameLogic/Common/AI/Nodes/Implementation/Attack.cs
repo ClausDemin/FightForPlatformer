@@ -18,7 +18,7 @@ namespace Assets.Codebase.GameLogic.Common.AI.Nodes.Implementation
 
         public override Status Evaluate()
         {
-            _attack.TryStartAttack();
+            _attack.TryStart();
 
             return Status.Success;
         }

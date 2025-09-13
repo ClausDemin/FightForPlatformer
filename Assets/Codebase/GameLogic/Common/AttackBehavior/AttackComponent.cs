@@ -5,30 +5,31 @@ using UnityEngine;
 
 namespace Assets.Codebase.GameLogic.Common.AttackBehavior
 {
-    public class AttackComponent : MonoBehaviour
+    public class AttackComponent : MonoBehaviour, IAttacker
     {
         private const float Offset = 1.0f;
 
         private IDamageService _damageService;
-        private AttackData _attackData;
+        private AttackData _data;
 
-        public void Init(IDamageService damageService, AttackData attackData)
+        public void Init(IDamageService damageService, AttackData data)
         {
             _damageService = damageService;
-            _attackData = attackData;
+            _data = data;
             IsInCooldown = false;
         }
 
-        public event Action Attack;
+        public event Action Happened;
 
-        public float Radius => _attackData.Radius;
+        public GameObject GameObject => gameObject;
+        public float Radius => _data.Radius;
         public bool IsInCooldown { get; private set; }
 
-        public bool TryStartAttack()
+        public bool TryStart()
         {
             if (IsInCooldown == false) 
             { 
-                Attack?.Invoke();
+                Happened?.Invoke();
                 return true;
             }
 
@@ -39,14 +40,14 @@ namespace Assets.Codebase.GameLogic.Common.AttackBehavior
         {
             Vector3 attackOrigin = transform.position + transform.right * Offset;
 
-            _damageService.Attack(gameObject, _attackData.Damage, attackOrigin, _attackData.Radius);
+            _damageService.PerformAttack(this, _data.Damage, attackOrigin, _data.Radius);
         }
 
         public void RaiseCooldown() 
         {
             IsInCooldown = true;
 
-            StartCoroutine(FreeCooldown(_attackData.Cooldown));
+            StartCoroutine(FreeCooldown(_data.Cooldown));
         }
 
         private IEnumerator FreeCooldown(float forSeconds) 
