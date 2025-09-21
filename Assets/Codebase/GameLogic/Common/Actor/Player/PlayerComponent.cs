@@ -16,6 +16,7 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Player
     public class PlayerComponent : MonoBehaviour
     {
         [SerializeField] private AnimationEventsListener _animationEvents;
+        [SerializeField] private Transform _view;
 
         private IInputService _inputService;
         private RotationService _rotationService;
@@ -108,7 +109,7 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Player
 
         private void FlipView(MovementDirection direction)
         {
-            _rotationService.RotateFaceToDirection(transform, direction);
+            _rotationService.RotateFaceToDirection(_view, direction);
         }
 
         private void SubscribeMovementEvents()
@@ -157,7 +158,7 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Player
 
         private void OnDeath()
         {
-            this.enabled = false;
+            enabled = false;
             Death?.Invoke();
         }
     }

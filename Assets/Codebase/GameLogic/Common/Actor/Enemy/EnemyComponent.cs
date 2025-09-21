@@ -16,6 +16,7 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Enemy
     public class EnemyComponent : MonoBehaviour
     {
         [SerializeField] private AnimationEventsListener _animationEvents;
+        [SerializeField] private Transform _view;
 
         private RotationService _rotationService;
         private EnemyMovement _movementComponent;
@@ -85,7 +86,7 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Enemy
 
         private void FlipView(MovementDirection direction)
         {
-            _rotationService.RotateFaceToDirection(transform, direction);
+            _rotationService.RotateFaceToDirection(_view, direction);
         }
 
         private void SubscribeMovementEvents()

@@ -9,6 +9,8 @@ namespace Assets.Codebase.GameLogic.Common.AttackBehavior
     {
         private const float Offset = 1.0f;
 
+        [SerializeField] private Transform _view;
+
         private IDamageService _damageService;
         private AttackData _data;
 
@@ -38,7 +40,7 @@ namespace Assets.Codebase.GameLogic.Common.AttackBehavior
 
         public void ApplyDamage()
         {
-            Vector3 attackOrigin = transform.position + transform.right * Offset;
+            Vector3 attackOrigin = transform.position + _view.right * Offset;
 
             _damageService.PerformAttack(this, _data.Damage, attackOrigin, _data.Radius);
         }

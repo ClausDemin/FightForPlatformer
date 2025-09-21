@@ -13,12 +13,13 @@ namespace Assets.Codebase.GameLogic.Common.HealthBehavior
             _health = healthData;
         }
 
-        public event Action<int> HealthChanged;
+        public event Action Changed;
         public event Action DamageTaken;
         public event Action Death;
 
         public int Current => _health.Current;
-        public float HealthPercentage => (float)_health.Current / _health.Max;
+        public int Max => _health.Max;
+        public float Percentage => (float)_health.Current / _health.Max;
         public bool IsAlive => _health.Current > 0;
 
         public void TakeDamage(int damage)
@@ -36,7 +37,7 @@ namespace Assets.Codebase.GameLogic.Common.HealthBehavior
                     DamageTaken?.Invoke();
                 }
 
-                HealthChanged?.Invoke(Current);
+                Changed?.Invoke();
             }
         }
 
@@ -44,7 +45,7 @@ namespace Assets.Codebase.GameLogic.Common.HealthBehavior
         {
             _health.Increase(amount);
 
-            HealthChanged?.Invoke(Current);
+            Changed?.Invoke();
         }
     }
 }
