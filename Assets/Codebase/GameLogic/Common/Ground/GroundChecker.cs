@@ -1,11 +1,17 @@
-﻿using UnityEngine;
+﻿using Assets.Codebase.GameLogic.Infrastructure.Installers.Interface;
+using System.Collections;
+using Unity.VisualScripting;
+using UnityEngine;
 
 namespace Assets.Codebase.GameLogic.Common.Ground
 {
     public class GroundChecker
     {
         private const string GroundLayerName = "Ground";
+
         private LayerMask _ground = LayerMask.GetMask(GroundLayerName);
+
+
 
         public bool CheckGround(Vector2 position, float epsilon = 0.05f) 
         {
@@ -15,7 +21,7 @@ namespace Assets.Codebase.GameLogic.Common.Ground
             {
                 return hit.distance <= epsilon;
             }
-            
+
             return false;
         }
     }

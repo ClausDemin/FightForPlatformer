@@ -2,9 +2,9 @@
 using Assets.Codebase.GameLogic.Common.JumpBehavior.Interface;
 using Assets.Codebase.GameLogic.Common.MovementBehavior.Enum;
 using Assets.Codebase.GameLogic.Common.MovementBehavior.Interface;
-using Assets.Codebase.GameLogic.Infrastructure.Inputs.Interface;
 using Assets.Codebase.GameLogic.Services.ResourcesLoading;
 using System;
+using System.Collections;
 using UnityEngine;
 using Zenject;
 
@@ -13,15 +13,20 @@ namespace Assets.Codebase.GameLogic.Common.MovementBehavior
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerMovement : MonoBehaviour
     {
+        private const float CoyoteTime = 0.075f;
+
         private IMovementService _movementService;
         private IJumpService _jumpService;
 
         private GroundChecker _groundChecker;
         private Rigidbody2D _rigidbody;
 
+        private YieldInstruction awaiting = new WaitForSeconds(CoyoteTime);
+
         private float _movementSpeed;
         private float _jumpForce;
         private bool _isGrounded;
+        private bool _isCoyoteTimeActive;
 
         [Inject]
         public void Construct(IMovementService movementService, IJumpService jumpService, GroundChecker groundChecker, StaticDataProvider playerStaticData)
@@ -90,9 +95,30 @@ namespace Assets.Codebase.GameLogic.Common.MovementBehavior
 
             if (_isGrounded != isGrounded)
             {
-                _isGrounded = isGrounded;
-                GroundStateChanged?.Invoke(_isGrounded);
+                if (isGrounded == false)
+                {
+                    if (_isCoyoteTimeActive == false)
+                    {
+                        StartCoroutine(WaitForCoyoteTime());
+                    }
+                }
+                else 
+                {
+                    _isGrounded = true;
+                    GroundStateChanged?.Invoke(_isGrounded);
+                }
             }
+        }
+
+        private IEnumerator WaitForCoyoteTime()
+        {
+            _isCoyoteTimeActive = true;
+
+            yield return awaiting;
+
+            _isGrounded = false;
+            GroundStateChanged?.Invoke(false);
+            _isCoyoteTimeActive = false;
         }
     }
 }

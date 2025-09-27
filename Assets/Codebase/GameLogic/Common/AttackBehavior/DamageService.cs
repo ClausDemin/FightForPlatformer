@@ -19,6 +19,11 @@ namespace Assets.Codebase.GameLogic.Common.AttackBehavior
             }
         }
 
+        public void PerformAttack(IDamageable target, int damage)
+        {
+            target.TakeDamage(damage);
+        }
+
         private IDamageable[] GetTargets(IAttacker attacker, Vector3 origin, float radius)
         {
             Vector2 center = new Vector2(origin.x, origin.y);

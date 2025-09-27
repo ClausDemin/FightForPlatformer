@@ -11,5 +11,7 @@ namespace Assets.Codebase.GameLogic.Infrastructure.Inputs.Interface
         public bool IsAttackButtonDown();
 
         public bool IsJumpButtonDown();
+
+        public bool IsSpellButtonDown();
     }
 }

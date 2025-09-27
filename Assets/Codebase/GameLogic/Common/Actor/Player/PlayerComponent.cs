@@ -1,4 +1,5 @@
-﻿using Assets.Codebase.GameLogic.Common.Actor.Player.Animation;
+﻿using Assets.Codebase.GameLogic.Common.Abilities;
+using Assets.Codebase.GameLogic.Common.Actor.Player.Animation;
 using Assets.Codebase.GameLogic.Common.AttackBehavior;
 using Assets.Codebase.GameLogic.Common.HealthBehavior;
 using Assets.Codebase.GameLogic.Common.InventoryBehavior;
@@ -13,6 +14,7 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Player
 {
     [RequireComponent(typeof(PlayerMovement), typeof(PlayerAnimator), typeof(InventoryComponent))]
     [RequireComponent(typeof(HealthComponent), typeof(AttackComponent), typeof(CollisionChecker))]
+    [RequireComponent(typeof(Vampirism))]
     public class PlayerComponent : MonoBehaviour
     {
         [SerializeField] private AnimationEventsListener _animationEvents;
@@ -26,6 +28,7 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Player
         private AttackComponent _attack;
         private InventoryComponent _inventoryComponent;
         private CollisionChecker _collisionChecker;
+        private Vampirism _ability;
 
         [Inject]
         public void Construct(IInputService inputService, RotationService rotationService)
@@ -46,6 +49,7 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Player
             _attack = GetComponent<AttackComponent>();
             _inventoryComponent = GetComponent<InventoryComponent>();
             _collisionChecker = GetComponent<CollisionChecker>();
+            _ability = GetComponent<Vampirism>();
         }
 
         private void Start()
@@ -62,6 +66,7 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Player
         private void Update()
         {
             HandleAttackInput();
+            HandleAbilityInput();
         }
 
         private void FixedUpdate()
@@ -104,6 +109,14 @@ namespace Assets.Codebase.GameLogic.Common.Actor.Player
             if (_inputService.IsAttackButtonDown())
             {
                 _attack.TryStart();
+            }
+        }
+
+        private void HandleAbilityInput() 
+        {
+            if (_inputService.IsSpellButtonDown()) 
+            {
+                _ability.Use();
             }
         }
 

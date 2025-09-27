@@ -23,5 +23,10 @@ namespace Assets.Codebase.GameLogic.Infrastructure.Inputs
         {
             return Input.GetKey(KeyCode.Space);
         }
+
+        public bool IsSpellButtonDown()
+        {
+            return Input.GetKey(KeyCode.F);
+        }
     }
 }

@@ -4,9 +4,7 @@ using Assets.Codebase.GameLogic.Common.AttackBehavior.Interface;
 using Assets.Codebase.GameLogic.Common.HealthBehavior;
 using Assets.Codebase.GameLogic.Infrastructure.Configs;
 using Assets.Codebase.GameLogic.Services.ResourcesLoading;
-using Assets.HealthBarPractice.Codebase.Common.HealthBehavior.View.Interface;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 using Zenject;
 
 namespace Assets.Codebase.GameLogic.Infrastructure.Factories
