@@ -7,7 +7,6 @@ namespace Assets.Codebase.GameLogic.Common.Abilities
     {
         [SerializeField] private float _growthTime;
 
-
         private void Awake()
         {
             gameObject.SetActive(false);

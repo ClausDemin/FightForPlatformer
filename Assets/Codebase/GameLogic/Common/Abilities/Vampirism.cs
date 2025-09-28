@@ -16,13 +16,13 @@ namespace Assets.Codebase.GameLogic.Common.Abilities
 {
     public class Vampirism : MonoBehaviour, IAbility
     {
+        [SerializeField] private HealthComponent _health;
+        
         private IDamageService _damageService;
         private IDamageable _current;
         private IRepository<EnemyComponent> _enemies;
         private ValueAccumulator _damageAccumulator;
         private YieldInstruction _cooldownAwaiter;
-
-        [SerializeField] HealthComponent _health;
 
         private int _damage;
         private bool _isRunning;
@@ -64,14 +64,13 @@ namespace Assets.Codebase.GameLogic.Common.Abilities
 
         private bool TryFindTarget()
         {
-            _current = _enemies
+            EnemyComponent nearestEnemy = _enemies
                 .Entities
-                .Select(enemy => enemy.GetComponent<HealthComponent>())
                 .OrderBy(enemy => (enemy.transform.position - transform.position).sqrMagnitude < Radius * Radius)
                 .Where(enemy => IsInRadius(enemy.transform))
                 .FirstOrDefault();
-                
-            if (_current != null) 
+
+            if (nearestEnemy != null && nearestEnemy.TryGetComponent(out _current)) 
             { 
                 return true;
             }
